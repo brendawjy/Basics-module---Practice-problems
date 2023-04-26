@@ -1,0 +1,26 @@
+#load the basic package
+library(tidyverse)
+
+#set the working directory into where you store the file in your computer
+setwd("C:/Users/brend/Documents/Data analytics course/R_course_ChicagoBooth/Basics")
+
+#import the file with read.csv and store it in a dataset which we'll call college
+college <- read.csv("College.csv")
+#note that if you just write read.csv("College.csv"), it will be printed immediately in your console (which can be quite messy) and isn't stored as a dataset yet
+#so remember to always store your imported data as a dataset
+
+#have a quicklook at your dataset
+view(college) 
+#this will open a window above the R console (if you're using RStudio)
+#As someone who is used to Excel and now struggling to learn about coding, i find this function very pleasant
+#you can also use the glimpse function
+glimpse(college)
+
+#to produce a scatterplot matrix of several columns (variables) of the data
+pairs(college[2:10]) #starting from the 2nd column because the first column (Private) is a non-numerical variable
+         
+#to create a boxplot between private college and outstate college
+plot(factor(college$Private), college$Outstate) #need to convert the Private column into factor before using it in boxplot#load tidyverse
+        
+        
+          
