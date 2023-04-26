@@ -24,6 +24,18 @@ plot(factor(college$Private), college$Outstate) #need to convert the Private col
 #the x axis represents whether the college is private or not, and the y axis will show the out of state tuition fee
 #as expected, tuition fee of private college is higher than public ones. the median is USD 20,000 while the median of public college is USD 5,000
 
+#create a new variable called Elite
+#this will divide into two groups based on whether or not the proportion of students coming from the top 10% of their high school classes exceeds 50% in that uni.
+#first, fill the Elite column with "No" value using the rep function
+Elite <- rep("No",nrow(college))
+#change the value of Elite to "Yes" if the value in the column 'Top10perc' exceeds 50%
+Elite[college$top10perc > 50] <- "Yes"
+#convert the value in Elite column from character into factor
+Elite <- as.factor(Elite)
+#combine the Elite column into the college dataset
+college <- data.frame(college, Elite)
+
+
         
         
           
