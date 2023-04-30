@@ -1,6 +1,6 @@
 # Basics-module---Practice-problems
 
-#*College*
+# *College*
 In the first exercise of Basics module, we will work on College dataset that contains the data from 777 different universities and colleges in the US.
 
 You can download the dataset here [College dataset](https://canvas.uchicago.edu/courses/43117/pages/r-module-1-basics) 
@@ -27,7 +27,7 @@ explanation for what each variable means (i got it from the pdf file of the prac
 * Grad.Rate : Graduation rate
 
 
-#*Auto*
+# *Auto*
 The second exercise uses a dataset called Auto. The data (Auto.csv) is also readily available in the website for download
 
  
