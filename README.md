@@ -30,5 +30,8 @@ explanation for what each variable means (i got it from the pdf file of the prac
 # *Auto*
 The second exercise uses a dataset called Auto. The data (Auto.csv) is also readily available in the website for download
 
+# *Boston*
+The last exercise uses Boston dataset that is contained in the MASS library
+
  
  
