@@ -21,6 +21,14 @@ dim(boston) #to find out the number of rows and columns in the dataset
 [1] 506  14
 pairs(boston) #to create scatterplots from each variable pairing in the dataset
 
+#crime rate correlates with several other variables. let's create a separate plot for each of the pairings
+#first, the zone
+plot(boston$zn, boston$crim)
+#crime rate is the highest when the proportion of residential land zoned for lots over 25,000 sq.ft is small.
+plot(boston$crim, boston$indus)
+#crime rate goes up when the proportion of non-retail business is between 18 to 20 percent
+
+
 
 
 
