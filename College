@@ -18,6 +18,9 @@ glimpse(college)
 
 #to produce a scatterplot matrix of several columns (variables) of the data
 pairs(college[2:10]) #starting from the 2nd column because the first column (Private) is a non-numerical variable
+#this command helps us to see how each variable is related to the every other variable
+#and getting an initial sense of how different variables are related to each other
+#it also helps to see if there are any outliers or unusual patterns in the data
          
 #to create a boxplot between private college and outstate college
 plot(factor(college$Private), college$Outstate) #need to convert the Private column into factor before using it in boxplot#load tidyverse
@@ -34,8 +37,4 @@ Elite[college$top10perc > 50] <- "Yes"
 Elite <- as.factor(Elite)
 #combine the Elite column into the college dataset
 college <- data.frame(college, Elite)
-
-
-        
-        
           
