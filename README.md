@@ -25,7 +25,8 @@ explanation for what each variable means (i got it from the pdf file of the prac
 * perc.alumni : Percent of alumni who donate
 * Expend : Instructional expenditure per student
 * Grad.Rate : Graduation rate
-
+## Problems
+###
 
 # *Auto*
 The second exercise uses a dataset called Auto. The data (Auto.csv) is also readily available in the website for download
