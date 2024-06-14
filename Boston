@@ -25,10 +25,54 @@ pairs(boston) #to create scatterplots from each variable pairing in the dataset
 #first, the zone
 plot(boston$zn, boston$crim)
 #crime rate is the highest when the proportion of residential land zoned for lots over 25,000 sq.ft is small.
-plot(boston$crim, boston$indus)
+plot(boston$indus, boston$crim)
 #crime rate goes up when the proportion of non-retail business is between 18 to 20 percent
 
+# Do any of the suburbs of Boston appear to have particularly high crime rates? 
+# Tax rates? 
+# Pupil-teacher ratios? Comment on the range of each these columns.
 
+# to figure out the max and min value of crime rate
+range(Boston$crim) 
+# to find out which row has the max value of the crime rate
+which.max(Boston$crim) 
 
+# to figure out the max and min value of tax rate
+range(Boston$tax)
+# to find out which row has the max value of the tax rate
+which.max(Boston$tax) 
 
+# to figure out the max and min value of pupil-teacher ratio
+range(Boston$ptratio)
+# to find out which row has the max value of pupil-teacher ratio
+which.max(Boston$ptratio) 
 
+# find out how many of the suburbs are bound to the Charles river
+
+# to subset the Boston dataset so that now it contains only those whose "Chas" value equal to 1
+# store it in the new dataset boston_chas
+boston_chas <- Boston[Boston$chas == 1, ]
+# check out the dimension
+dim(boston_chas)
+
+# use median to find out the median of pupil-teacher ratio
+median(Boston$ptratio)
+
+# find out which suburb has the lowest median value of owner-occupied homes 
+# What are the values of the other variables(columns) for that suburb? bles(columns)?
+
+# this will show the value in other columns related to the lowest value
+# in the medv column
+boston_min_medv <- Boston[Boston$medv == min(Boston$medv), ]
+View(boston_min_medv)
+sapply(Boston, range)
+
+# find out how many of the suburbs average more than seven and eight
+# rooms per dwelling?
+boston_7rm <- Boston[Boston$rm > 7,]
+View(boston_7rm)
+dim(boston_7rm)
+
+boston_8rm <- Boston[Boston$rm > 8,]
+View(boston_8rm)
+dim(boston_8rm)
